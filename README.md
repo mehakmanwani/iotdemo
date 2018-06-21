@@ -9,7 +9,7 @@
 
 ![1](https://user-images.githubusercontent.com/36006325/41722508-d6156ecc-7579-11e8-98f0-b399b3b9fbb9.png)
 
-3. Enter a name and host for your application. Both names must be unique. Then, click Create.
+3. Enter a name for your application. Name must be unique. Then, click Create.
 
 ![2](https://user-images.githubusercontent.com/36006325/41722563-fea70a4e-7579-11e8-85ab-461f60a198af.png)
 
@@ -45,3 +45,44 @@ In the flow editor, note that the flow has three green output debug nodes that s
 You might need to scroll down in the debug pane to see the simplified view of temperatures.
 
 ![9](https://user-images.githubusercontent.com/36006325/41723228-91197186-757b-11e8-987c-f2c08365f4ba.png)
+
+### Add Email notifications to your flow
+
+You’ll need an Email account.
+
+1. In the flow editor under social, drag a email out node onto the canvas under the cpu status node so that you can notify others when the CPU temperature exceeds 40° Celsius.
+
+2. Click the connecting port of the danger node on the right and connect it to the Email (email out) node.
+
+3. Double-click the Email node to edit its information.
+
+4. Click the pencil icon to edit and associate the Email node with the Email account of your choice.
+
+5. Click Done and then deploy the Node-RED flow.
+Whenever the temperature exceeds 40° Celsius, an email is sent. 
+
+### Display data collected in real-time
+
+1. Click on the hamburger menu on the top right corner
+
+2. Click on Manage Palette
+
+3. Click on the install tab
+
+4. Search for 'node-red-dashboard'
+
+5. Click on Install
+
+6. In the flow editor under dashboard, drag the chart node onto the canvas above the temp node so that you can display the temperature data as it is collected.
+
+7. Click the connecting port of the temp node on the right and connect it to the chart node.
+
+8. Double-click the chart node to edit its information.
+
+9. Once all the information has been entered, click on Deploy.
+
+10. Next click on the dashboard tab on the right pane and click on the link-out icon which will direct you to the Node-Red Dashboard consisting of the chart displayed.
+
+As the temperature of the sensor changes, you can see the changes reflect on the chart.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
